@@ -5,7 +5,7 @@ import { DashboardLayout } from "@/components/DashboardLayout";
 import { courses } from "@/data/courses";
 
 const stats = [
-  { label: "Total Courses", value: "6", icon: BookOpen, color: "text-primary" },
+  { label: "Total Courses", value: "45", icon: BookOpen, color: "text-primary" },
   { label: "Active Students", value: "1,247", icon: Users, color: "text-success" },
   { label: "Events", value: "12", icon: Calendar, color: "text-amber-500" },
   { label: "Completion Rate", value: "89%", icon: TrendingUp, color: "text-cyan-500" },
@@ -45,8 +45,8 @@ export default function Index() {
             {courses.slice(0, 3).map((course) => (
               <Link key={course.id} to="/courses">
                 <Card className="group overflow-hidden border-0 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5">
-                  <div className={`h-32 bg-gradient-to-br ${course.gradient} flex items-center justify-center`}>
-                    <span className="text-4xl drop-shadow-lg">{course.icon}</span>
+                  <div className="h-32 overflow-hidden">
+                    <img src={course.image} alt={course.title} className="w-full h-full object-cover" loading="lazy" width={768} height={512} />
                   </div>
                   <CardContent className="p-4">
                     <h3 className="font-semibold text-foreground text-sm line-clamp-1">{course.title}</h3>
