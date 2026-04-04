@@ -1,4 +1,4 @@
-import course1 from "@/assets/course-1.jpg";
+import course1 from "@/assets/https://tagmango.com/publicassets/-8738f16d076d493cb11a7d59e9e8c97a-286e2df840ee98dbe9cc7a85c6ff3b34.jpeg";
 import course2 from "@/assets/course-2.jpg";
 import course3 from "@/assets/course-3.jpg";
 import course4 from "@/assets/course-4.jpg";
