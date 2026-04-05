@@ -1,4 +1,4 @@
-import course1 from "@/assets/course-1.jpg";
+import course1 from "@/assets/course-1.jpeg";
 import course2 from "@/assets/course-2.jpg";
 import course3 from "@/assets/course-3.jpg";
 import course4 from "@/assets/course-4.jpg";
