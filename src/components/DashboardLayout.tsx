@@ -20,9 +20,9 @@ export function DashboardLayout({ children }: { children: React.ReactNode }) {
           <div className="flex items-center gap-8">
             <Link to="/" className="flex items-center gap-2">
               <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-primary-foreground font-bold text-sm">
-                L
+                C
               </div>
-              <span className="text-lg font-bold text-foreground">Learnify</span>
+              <span className="text-lg font-bold text-foreground">Cloud Kitchen Network</span>
             </Link>
             <nav className="hidden md:flex items-center gap-1">
               {navItems.map((item) => {
