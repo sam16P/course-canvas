@@ -45,11 +45,11 @@ export function CourseCard({ course }: { course: Course }) {
           <h3 className="font-semibold text-foreground leading-snug line-clamp-2 group-hover:text-primary transition-colors">
             {course.title}
           </h3>
-          <p className="mt-1.5 text-sm text-muted-foreground line-clamp-2">
-            {course.description}
+          <p className="mt-1 text-xs text-muted-foreground">
+            {course.sections} sections • {course.lectures} lectures
           </p>
-          <div className="mt-4 flex items-center justify-between">
-            <Badge className="bg-success/10 text-success border-success/20 hover:bg-success/20">
+          <div className="mt-3 flex items-center justify-between">
+            <Badge className={course.status === "Draft" ? "bg-amber-500/10 text-amber-600 border-amber-500/20" : "bg-success/10 text-success border-success/20 hover:bg-success/20"}>
               {course.status}
             </Badge>
             <Badge variant="outline">{course.category}</Badge>
