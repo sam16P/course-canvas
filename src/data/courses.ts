@@ -2,11 +2,11 @@ import course1 from "@/assets/course-1.jpeg";
 import course2 from "@/assets/course-2.png";
 import course3 from "@/assets/course-3.png";
 import course4 from "@/assets/course-4.png";
-import course5 from "@/assets/course-5.jpg";
-import course6 from "@/assets/course-6.jpg";
+import course5 from "@/assets/course-5.png";
+import course6 from "@/assets/course-6.png";
 import course7 from "@/assets/course-7.jpg";
-import course8 from "@/assets/course-8.jpg";
-import course9 from "@/assets/course-9.jpg";
+import course8 from "@/assets/course-08.png";
+import course9 from "@/assets/course-09.png";
 
 export interface Course {
   id: string;
