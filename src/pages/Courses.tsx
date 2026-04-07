@@ -28,12 +28,12 @@ export default function Courses() {
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <h1 className="text-2xl font-bold text-foreground">Courses</h1>
           <div className="flex items-center gap-3">
-            <Button variant="outline">Reorder Courses</Button>
+            {/* <Button variant="outline">Reorder Courses</Button> */}
             <Link to="/create-course">
-              <Button className="gap-2">
+              {/* <Button className="gap-2">
                 <Plus className="h-4 w-4" />
                 Create
-              </Button>
+              </Button> */}
             </Link>
           </div>
         </div>
