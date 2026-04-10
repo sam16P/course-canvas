@@ -4,10 +4,10 @@ import { Button } from "@/components/ui/button";
 
 const navItems = [
   { label: "Dashboard", path: "/" },
-  { label: "Community", path: "/community" },
-  { label: "Events", path: "/events" },
+  // { label: "Community", path: "/community" },
+  // { label: "Events", path: "/events" },
   { label: "Courses", path: "/courses" },
-  { label: "Level Up", path: "/level-up" },
+  // { label: "Level Up", path: "/level-up" },
 ];
 
 export function DashboardLayout({ children }: { children: React.ReactNode }) {
