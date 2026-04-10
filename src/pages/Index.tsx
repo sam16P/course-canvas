@@ -6,7 +6,7 @@ import { courses } from "@/data/courses";
 
 const stats = [
   { label: "Total Courses", value: "45", icon: BookOpen, color: "text-primary" },
-  { label: "Active Students", value: "1,247", icon: Users, color: "text-success" },
+  { label: "Active Students", value: "80,000+", icon: Users, color: "text-success" },
   { label: "Events", value: "12", icon: Calendar, color: "text-amber-500" },
   { label: "Completion Rate", value: "89%", icon: TrendingUp, color: "text-cyan-500" },
 ];
