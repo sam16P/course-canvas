@@ -54,11 +54,13 @@ export function DashboardLayout({ children }: { children: React.ReactNode }) {
               <Bell className="h-5 w-5 text-muted-foreground" />
               <span className="absolute right-2 top-2 h-2 w-2 rounded-full bg-primary" />
             </Button>
-            <Button variant="ghost" size="icon" className="rounded-full">
-              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10">
-                <User className="h-4 w-4 text-primary" />
-              </div>
-            </Button>
+            <a href="http://academy.cloudkitchennetwork.com/" target="_blank" rel="noopener noreferrer">
+              <Button variant="ghost" size="icon" className="rounded-full">
+                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10">
+                  <User className="h-4 w-4 text-primary" />
+                </div>
+              </Button>
+            </a>
           </div>
         </div>
       </header>
