@@ -3,7 +3,7 @@ import { Bell, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navItems = [
-  { label: "Dashboard", path: "/" },
+  // { label: "Dashboard", path: "/" },
   // { label: "Community", path: "/community" },
   // { label: "Events", path: "/events" },
   { label: "Courses", path: "/courses" },
