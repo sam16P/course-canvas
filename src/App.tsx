@@ -5,6 +5,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Courses from "./pages/Courses";
+import { LeadCapturePopup } from "./components/LeadCapturePopup";
 
 const CourseDetail = lazy(() => import("./pages/CourseDetail"));
 const CreateCourse = lazy(() => import("./pages/CreateCourse"));
@@ -18,6 +19,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <LeadCapturePopup />
         <Suspense fallback={<div className="min-h-screen bg-background" />}>
           <Routes>
             <Route path="/" element={<Courses />} />
