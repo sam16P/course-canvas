@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { DashboardLayout } from "@/components/DashboardLayout";
 import { CourseCard } from "@/components/CourseCard";
+import { PremiumHero } from "@/components/PremiumHero";
 import { courses, categories } from "@/data/courses";
 
 export default function Courses() {
@@ -24,6 +25,7 @@ export default function Courses() {
 
   return (
     <DashboardLayout>
+      <PremiumHero />
       <div className="flex flex-col gap-6">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <h1 className="text-2xl font-bold text-foreground">Courses</h1>
