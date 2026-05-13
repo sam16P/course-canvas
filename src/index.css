@@ -96,7 +96,41 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #f6f1ea;
+    background-image:
+      radial-gradient(900px 600px at 8% -10%, rgba(249, 115, 22, 0.10), transparent 60%),
+      radial-gradient(800px 600px at 100% 0%, rgba(239, 68, 68, 0.08), transparent 60%),
+      radial-gradient(700px 500px at 50% 110%, rgba(24, 18, 15, 0.10), transparent 60%),
+      linear-gradient(180deg, #faf6f0 0%, #f3ece2 50%, #efe7da 100%);
+    background-attachment: fixed;
+    position: relative;
+  }
+
+  /* Subtle premium grain overlay */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.5;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.045 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  }
+
+  #root, main, header { position: relative; z-index: 1; }
+
+  /* Premium card lift across the app */
+  .premium-card {
+    background: rgba(255,255,255,0.72);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255,255,255,0.6);
+    box-shadow:
+      0 1px 0 rgba(255,255,255,0.7) inset,
+      0 20px 50px -24px rgba(20, 14, 10, 0.18),
+      0 6px 18px -10px rgba(20, 14, 10, 0.10);
   }
 }

@@ -22,7 +22,7 @@ export function CourseCard({ course }: { course: Course }) {
   return (
     <>
       <Card
-        className="group overflow-hidden border-0 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer"
+        className="premium-card group overflow-hidden border-0 rounded-[18px] hover:shadow-2xl transition-all duration-300 hover:-translate-y-1.5 cursor-pointer"
         onClick={() => setOpen(true)}
       >
         <div className="relative h-40 overflow-hidden">
