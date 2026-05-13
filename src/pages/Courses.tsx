@@ -28,7 +28,7 @@ export default function Courses() {
       <PremiumHero />
       <div className="flex flex-col gap-6">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <h1 className="text-2xl font-bold text-foreground">Courses</h1>
+          <h1 className="text-2xl font-bold text-white">Courses</h1>
           <div className="flex items-center gap-3">
             {/* <Button variant="outline">Reorder Courses</Button> */}
             <Link to="/create-course">
@@ -42,16 +42,16 @@ export default function Courses() {
 
         <div className="flex flex-col sm:flex-row gap-3">
           <div className="relative flex-1">
-            <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+            <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-white/50" />
             <Input
               placeholder="Search by course title or description"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="pl-10 bg-card"
+              className="pl-10 bg-white/5 border-white/10 text-white placeholder:text-white/40 backdrop-blur-md"
             />
           </div>
           <Select value={category} onValueChange={setCategory}>
-            <SelectTrigger className="w-full sm:w-[200px] bg-card">
+            <SelectTrigger className="w-full sm:w-[200px] bg-white/5 border-white/10 text-white backdrop-blur-md">
               <SelectValue placeholder="Course category" />
             </SelectTrigger>
             <SelectContent>
@@ -65,7 +65,7 @@ export default function Courses() {
         </div>
 
         {filtered.length === 0 ? (
-          <div className="flex flex-col items-center justify-center py-20 text-muted-foreground">
+          <div className="flex flex-col items-center justify-center py-20 text-white/70">
             <p className="text-lg font-medium">No courses found</p>
             <p className="text-sm">Try adjusting your search or filter</p>
           </div>

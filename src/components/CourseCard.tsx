@@ -22,7 +22,7 @@ export function CourseCard({ course }: { course: Course }) {
   return (
     <>
       <Card
-        className="premium-card group overflow-hidden border-0 rounded-[18px] hover:shadow-2xl transition-all duration-300 hover:-translate-y-1.5 cursor-pointer"
+        className="premium-card group overflow-hidden rounded-[18px] hover:-translate-y-1.5 cursor-pointer"
         onClick={() => setOpen(true)}
       >
         <div className="relative h-40 overflow-hidden">
@@ -34,25 +34,25 @@ export function CourseCard({ course }: { course: Course }) {
             width={768}
             height={512}
           />
-          <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#18002E] via-[#18002E]/40 to-transparent" />
           <div className="absolute top-3 right-3">
-            <Badge className="bg-background/90 text-foreground border-0 font-bold text-sm shadow-md backdrop-blur-sm">
+            <Badge className="bg-gradient-to-r from-orange-500 to-red-500 text-white border-0 font-bold text-sm shadow-[0_8px_20px_-6px_rgba(239,68,68,0.6)] backdrop-blur-sm">
               {course.price}
             </Badge>
           </div>
         </div>
         <div className="p-5">
-          <h3 className="font-semibold text-foreground leading-snug line-clamp-2 group-hover:text-primary transition-colors">
+          <h3 className="font-semibold text-white leading-snug line-clamp-2 group-hover:text-orange-300 transition-colors">
             {course.title}
           </h3>
-          <p className="mt-1 text-xs text-muted-foreground">
+          <p className="mt-1 text-xs text-white/60">
             {course.sections} sections • {course.lectures} lectures
           </p>
           <div className="mt-3 flex items-center justify-between">
-            <Badge className={course.status === "Draft" ? "bg-amber-500/10 text-amber-600 border-amber-500/20" : "bg-success/10 text-success border-success/20 hover:bg-success/20"}>
+            <Badge className={course.status === "Draft" ? "bg-amber-500/15 text-amber-300 border-amber-500/30" : "bg-emerald-500/15 text-emerald-300 border-emerald-500/30"}>
               {course.status}
             </Badge>
-            <Badge variant="outline">{course.category}</Badge>
+            <Badge variant="outline" className="border-white/20 text-white/80">{course.category}</Badge>
           </div>
         </div>
       </Card>
