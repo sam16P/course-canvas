@@ -84,7 +84,7 @@ export function PremiumHero() {
   }, []);
 
   return (
-    <section className="ckn-root -mx-4 sm:-mx-6 -mt-8 mb-10">
+    <section className="ckn-root -mx-4 sm:-mx-6 -mt-8 mb-12">
       <style>{`
         .ckn-root { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
         .ckn-root *, .ckn-root *::before, .ckn-root *::after { box-sizing: border-box; }
@@ -97,17 +97,31 @@ export function PremiumHero() {
         .ckn-hero {
           position: relative;
           overflow: hidden;
-          background: radial-gradient(1200px 600px at 10% 20%, rgba(124,58,237,.45), transparent 60%),
-                      radial-gradient(900px 500px at 90% 80%, rgba(236,72,153,.25), transparent 60%),
-                      linear-gradient(135deg, #0b0418 0%, #1a0a36 50%, #050010 100%);
+          background:
+            radial-gradient(1200px 600px at 8% 15%, rgba(249,115,22,.35), transparent 60%),
+            radial-gradient(900px 600px at 95% 85%, rgba(220,38,38,.30), transparent 60%),
+            radial-gradient(600px 400px at 50% 50%, rgba(251,191,36,.10), transparent 70%),
+            linear-gradient(135deg, #0a0807 0%, #1a1310 45%, #0b0807 100%);
           color: #fff;
-          padding: 84px 24px 96px;
+          padding: 96px 24px 110px;
+          border-radius: 0 0 36px 36px;
+          box-shadow: 0 40px 80px -40px rgba(0,0,0,.55);
+        }
+        .ckn-hero::after, .ckn-hero::before { animation: cknFloat 14s ease-in-out infinite; }
+        @keyframes cknFloat {
+          0%, 100% { transform: translate3d(0,0,0) scale(1); }
+          50% { transform: translate3d(20px,-20px,0) scale(1.08); }
+        }
+        /* grain */
+        .ckn-hero > .ckn-grain {
+          position: absolute; inset: 0; pointer-events: none; opacity: .35; mix-blend-mode: overlay;
+          background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.08 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
         }
         .ckn-hero::before, .ckn-hero::after {
           content: ""; position: absolute; border-radius: 50%; filter: blur(80px); opacity: .55; pointer-events: none;
         }
-        .ckn-hero::before { width: 380px; height: 380px; background: #7c3aed; top: -80px; left: -80px; }
-        .ckn-hero::after  { width: 460px; height: 460px; background: #db2777; bottom: -120px; right: -100px; opacity: .35; }
+        .ckn-hero::before { width: 420px; height: 420px; background: #f97316; top: -100px; left: -80px; opacity: .45; }
+        .ckn-hero::after  { width: 500px; height: 500px; background: #dc2626; bottom: -140px; right: -120px; opacity: .35; }
         .ckn-hero-inner { position: relative; max-width: 1200px; margin: 0 auto; }
         .ckn-strip {
           display: inline-block; padding: 8px 18px; border-radius: 999px;
@@ -119,10 +133,11 @@ export function PremiumHero() {
         .ckn-hero h1 {
           font-size: clamp(40px, 7vw, 88px); line-height: 1.02; font-weight: 900;
           letter-spacing: -.02em; margin: 0 0 18px;
-          background: linear-gradient(90deg, #ffffff 0%, #e9d5ff 60%, #ffffff 100%);
+          background: linear-gradient(90deg, #ffffff 0%, #fed7aa 55%, #ffffff 100%);
           -webkit-background-clip: text; background-clip: text; color: transparent;
+          text-shadow: 0 10px 60px rgba(249,115,22,.25);
         }
-        .ckn-hero p.sub { font-size: clamp(15px, 1.6vw, 20px); color: #cbb8ff; max-width: 680px; margin: 0 0 36px; }
+        .ckn-hero p.sub { font-size: clamp(15px, 1.6vw, 20px); color: #e7d6c4; max-width: 680px; margin: 0 0 36px; }
         .ckn-cta {
           display: inline-flex; align-items: center; gap: 10px;
           padding: 18px 38px; font-weight: 800; font-size: 16px; letter-spacing: .12em;
@@ -133,27 +148,40 @@ export function PremiumHero() {
         }
         .ckn-cta:hover { transform: translateY(-3px) scale(1.02); filter: brightness(1.08);
           box-shadow: 0 28px 60px -10px rgba(239,68,68,.8); }
-        .ckn-cta-note { display: block; margin-top: 16px; font-size: 12px; letter-spacing: .18em; color: #a78bfa; text-transform: uppercase; }
+        .ckn-cta-note { display: block; margin-top: 16px; font-size: 12px; letter-spacing: .18em; color: #fbbf24; text-transform: uppercase; }
 
         /* ===== OFFER ===== */
-        .ckn-offer { background: linear-gradient(180deg, #f7f7fb 0%, #ffffff 100%); padding: 80px 24px; }
+        .ckn-offer {
+          position: relative;
+          background:
+            radial-gradient(700px 400px at 10% 0%, rgba(249,115,22,.10), transparent 60%),
+            radial-gradient(600px 400px at 95% 100%, rgba(220,38,38,.08), transparent 60%),
+            linear-gradient(180deg, #faf6f0 0%, #f3ece2 100%);
+          padding: 90px 24px;
+        }
         .ckn-offer-inner { max-width: 1100px; margin: 0 auto; text-align: center; }
         .ckn-offer h2 {
           font-size: clamp(28px, 4vw, 46px); font-weight: 900; margin: 0 0 12px;
           background: linear-gradient(90deg, #f97316, #ef4444);
           -webkit-background-clip: text; background-clip: text; color: transparent;
         }
-        .ckn-offer .lead { color: #4b5563; max-width: 640px; margin: 0 auto 44px; font-size: 16px; }
+        .ckn-offer .lead { color: #5b4a3b; max-width: 640px; margin: 0 auto 44px; font-size: 16px; }
         .ckn-card {
-          background: #fff; border-radius: 24px; padding: 48px 32px;
-          box-shadow: 0 30px 80px -30px rgba(15,23,42,.25), 0 8px 24px -12px rgba(15,23,42,.1);
-          border: 1px solid #eef0f6; text-align: center;
+          background: rgba(255,255,255,.78);
+          backdrop-filter: blur(14px);
+          -webkit-backdrop-filter: blur(14px);
+          border-radius: 28px; padding: 52px 32px;
+          box-shadow:
+            0 1px 0 rgba(255,255,255,.8) inset,
+            0 40px 100px -40px rgba(20,14,10,.30),
+            0 12px 30px -16px rgba(20,14,10,.14);
+          border: 1px solid rgba(255,255,255,.7); text-align: center;
         }
         .ckn-logo {
           width: 76px; height: 76px; margin: 0 auto 16px; border-radius: 20px;
-          background: linear-gradient(135deg, #7c3aed, #4f46e5); color: #fff;
+          background: linear-gradient(135deg, #f97316, #dc2626); color: #fff;
           display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 22px;
-          box-shadow: 0 12px 30px -10px rgba(124,58,237,.6);
+          box-shadow: 0 12px 30px -8px rgba(220,38,38,.55);
         }
         .ckn-tier { letter-spacing: .35em; font-size: 13px; color: #6b7280; font-weight: 700; }
         .ckn-divider { height: 1px; background: linear-gradient(90deg, transparent, #e5e7eb, transparent); margin: 22px auto; max-width: 380px; }
@@ -166,26 +194,29 @@ export function PremiumHero() {
         .ckn-feature:hover { transform: translateY(-6px); }
         .ckn-circle {
           width: 130px; height: 130px; border-radius: 50%; margin: 0 auto 14px;
-          background: linear-gradient(135deg, #ede9fe, #fae8ff);
+          background: linear-gradient(135deg, #fff7ed, #fee2e2);
           display: flex; align-items: center; justify-content: center; font-size: 48px;
-          box-shadow: 0 18px 36px -16px rgba(124,58,237,.45), inset 0 0 0 6px #fff;
+          box-shadow: 0 18px 36px -14px rgba(220,38,38,.30), inset 0 0 0 6px #fff;
         }
         .ckn-feature h4 { font-size: 13px; font-weight: 900; letter-spacing: .08em; color: #0f172a; margin: 6px 0 4px; }
         .ckn-feature p { font-size: 12px; color: #6b7280; margin: 0; letter-spacing: .04em; font-weight: 600; }
 
         /* ===== STORIES ===== */
         .ckn-stories {
-          position: relative; padding: 88px 24px;
+          position: relative; padding: 96px 24px; border-radius: 36px 36px 0 0;
           background:
-            linear-gradient(rgba(5,0,20,.85), rgba(5,0,20,.92)),
+            radial-gradient(800px 500px at 15% 20%, rgba(249,115,22,.25), transparent 60%),
+            radial-gradient(800px 500px at 85% 80%, rgba(220,38,38,.22), transparent 60%),
+            linear-gradient(180deg, rgba(10,8,7,.92), rgba(10,8,7,.96)),
             url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1600&q=60') center/cover no-repeat;
           color: #fff;
+          box-shadow: 0 -40px 80px -40px rgba(0,0,0,.4);
         }
         .ckn-stories-inner { max-width: 1200px; margin: 0 auto; }
         .ckn-stories h2 {
           text-align: center; font-size: clamp(28px, 4vw, 46px); font-weight: 900;
           letter-spacing: .04em; margin: 0 0 48px;
-          background: linear-gradient(90deg, #fff, #c4b5fd);
+          background: linear-gradient(90deg, #fff, #fed7aa);
           -webkit-background-clip: text; background-clip: text; color: transparent;
         }
         .ckn-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
@@ -231,6 +262,7 @@ export function PremiumHero() {
 
       {/* SECTION 1 — HERO */}
       <div className="ckn-hero">
+        <div className="ckn-grain" />
         <div className="ckn-hero-inner">
           <div className="ckn-reveal">
             <span className="ckn-strip"><b>DO NOT MISS OUT!</b> &nbsp;Special Offer Of The Month Below</span>
