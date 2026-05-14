@@ -1,5 +1,6 @@
 import { useEffect, useState, FormEvent } from "react";
 import { X } from "lucide-react";
+import cknLogo from "@/assets/ckn-logo.png";
 
 const ACADEMY_URL = "https://academy.cloudkitchennetwork.com/";
 
@@ -74,9 +75,13 @@ export function LeadCapturePopup() {
         </button>
 
         <div className="text-center">
-          <div className="mx-auto mb-3 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#7B61FF] to-[#4B2EBA] text-white font-bold shadow-lg">
-            C
-          </div>
+          <img
+            src={cknLogo}
+            alt="Cloud Kitchen Network logo"
+            width={64}
+            height={64}
+            className="mx-auto mb-3 h-16 w-16 rounded-2xl bg-white object-contain p-1.5 shadow-lg"
+          />
           <h2 className="text-2xl sm:text-[26px] font-bold tracking-tight text-foreground">
             Welcome to Cloud Kitchen Network
           </h2>

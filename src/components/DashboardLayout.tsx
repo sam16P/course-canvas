@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { Bell, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import cknLogo from "@/assets/ckn-logo.png";
 
 const navItems = [
   // { label: "Dashboard", path: "/" },
@@ -19,9 +20,13 @@ export function DashboardLayout({ children }: { children: React.ReactNode }) {
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
           <div className="flex items-center gap-8">
             <Link to="/" className="flex items-center gap-2">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-fuchsia-500 to-orange-500 text-white font-bold text-sm shadow-[0_0_20px_-4px_rgba(236,72,153,0.6)]">
-                C
-              </div>
+              <img
+                src={cknLogo}
+                alt="Cloud Kitchen Network logo"
+                width={36}
+                height={36}
+                className="h-9 w-9 rounded-lg bg-white object-contain p-1 shadow-[0_0_20px_-4px_rgba(236,72,153,0.6)]"
+              />
               <span className="text-lg font-bold text-white">Cloud Kitchen Network</span>
             </Link>
             <nav className="hidden md:flex items-center gap-1">
