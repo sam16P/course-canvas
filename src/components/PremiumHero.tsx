@@ -180,8 +180,7 @@ export function PremiumHero() {
         }
         .ckn-logo {
           width: 76px; height: 76px; margin: 0 auto 16px; border-radius: 20px;
-          background: linear-gradient(135deg, #a820c8, #ec4899); color: #fff;
-          display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 22px;
+          background: #fff; padding: 8px; object-fit: contain; display: block;
           box-shadow: 0 12px 30px -6px rgba(236,72,153,.65);
         }
         .ckn-tier { letter-spacing: .35em; font-size: 13px; color: #c4a3e0; font-weight: 700; }
@@ -296,7 +295,7 @@ export function PremiumHero() {
             When you lock in your spot &amp; complete the transaction today, you'll get
           </p>
           <div className="ckn-card ckn-reveal">
-            <div className="ckn-logo">CKN</div>
+            <img src="/ckn-logo.png" alt="Cloud Kitchen Network logo" width={76} height={76} className="ckn-logo" />
             <div className="ckn-tier">SILVER MEMBERS</div>
             <div className="ckn-divider" />
             <h3 className="ckn-headline">
