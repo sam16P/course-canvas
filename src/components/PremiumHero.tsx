@@ -276,7 +276,7 @@ export function PremiumHero() {
           <div className="ckn-reveal">
             <button
               className="ckn-cta"
-              onClick={() => offerRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })}
+              onClick={() => window.location.href = "https://academy.cloudkitchennetwork.com/web/checkout/691d86d0274820516cc3339d"}
             >
               GET THE OFFER →
             </button>
