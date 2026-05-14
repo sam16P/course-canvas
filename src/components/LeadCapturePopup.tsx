@@ -34,12 +34,9 @@ export function LeadCapturePopup() {
     if (!/^\d{7,15}$/.test(form.mobile.trim())) errs.mobile = "Enter a valid mobile number";
     setErrors(errs);
     if (Object.keys(errs).length) return;
-    // Hook for future integrations (Sheets/CRM/WhatsApp/Zapier)
-    try {
-      const leads = JSON.parse(localStorage.getItem("ckn_leads") || "[]");
-      leads.push({ ...form, ts: Date.now() });
-      localStorage.setItem("ckn_leads", JSON.stringify(leads));
-    } catch {}
+    // Integration hook: connect a secure backend (edge function, CRM, webhook)
+    // here before collecting PII. Intentionally NOT persisting to localStorage
+    // to avoid storing personal data in plaintext browser storage.
     close();
   };
 
