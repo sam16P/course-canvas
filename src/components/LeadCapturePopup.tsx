@@ -102,11 +102,11 @@ export function LeadCapturePopup() {
         </a>
 
         <div className="my-5 flex items-center gap-3">
-          <div className="h-px flex-1 bg-gradient-to-r from-transparent via-foreground/15 to-transparent" />
-          <span className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+          <div className="h-px flex-1 bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
+          <span className="text-xs font-medium uppercase tracking-wider text-gray-500">
             New Here? Register Below
           </span>
-          <div className="h-px flex-1 bg-gradient-to-r from-transparent via-foreground/15 to-transparent" />
+          <div className="h-px flex-1 bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-3">
@@ -116,9 +116,9 @@ export function LeadCapturePopup() {
               placeholder="Full Name"
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
-              className="w-full rounded-xl border border-border/60 bg-white/70 px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+              className="w-full rounded-xl border border-gray-200 bg-white/70 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
             />
-            {errors.name && <p className="mt-1 text-xs text-destructive">{errors.name}</p>}
+            {errors.name && <p className="mt-1 text-xs text-red-600">{errors.name}</p>}
           </div>
           <div>
             <input
@@ -126,9 +126,9 @@ export function LeadCapturePopup() {
               placeholder="City"
               value={form.city}
               onChange={(e) => setForm({ ...form, city: e.target.value })}
-              className="w-full rounded-xl border border-border/60 bg-white/70 px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+              className="w-full rounded-xl border border-gray-200 bg-white/70 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
             />
-            {errors.city && <p className="mt-1 text-xs text-destructive">{errors.city}</p>}
+            {errors.city && <p className="mt-1 text-xs text-red-600">{errors.city}</p>}
           </div>
           <div>
             <input
@@ -139,14 +139,14 @@ export function LeadCapturePopup() {
               onChange={(e) =>
                 setForm({ ...form, mobile: e.target.value.replace(/[^\d]/g, "") })
               }
-              className="w-full rounded-xl border border-border/60 bg-white/70 px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+              className="w-full rounded-xl border border-gray-200 bg-white/70 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
             />
-            {errors.mobile && <p className="mt-1 text-xs text-destructive">{errors.mobile}</p>}
+            {errors.mobile && <p className="mt-1 text-xs text-red-600">{errors.mobile}</p>}
           </div>
 
           <button
             type="submit"
-            className="mt-2 flex w-full items-center justify-center rounded-xl bg-foreground px-5 py-3.5 text-sm font-semibold text-background transition-all hover:-translate-y-0.5 hover:shadow-lg"
+            className="mt-2 flex w-full items-center justify-center rounded-xl bg-gray-900 px-5 py-3.5 text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:shadow-lg"
           >
             Register & Continue
           </button>
@@ -154,7 +154,7 @@ export function LeadCapturePopup() {
 
         <button
           onClick={close}
-          className="mt-4 w-full text-center text-xs font-medium text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
+          className="mt-4 w-full text-center text-xs font-medium text-gray-500 underline-offset-4 hover:text-gray-900 hover:underline"
         >
           Skip & Continue
         </button>
