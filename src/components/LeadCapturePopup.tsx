@@ -66,7 +66,7 @@ export function LeadCapturePopup() {
         <button
           onClick={close}
           aria-label="Close"
-          className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full bg-black/5 text-foreground/70 transition hover:bg-black/10 hover:text-foreground"
+          className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full bg-black/5 text-gray-600 transition hover:bg-black/10 hover:text-gray-900"
         >
           <X className="h-4 w-4" />
         </button>
@@ -79,10 +79,10 @@ export function LeadCapturePopup() {
             height={64}
             className="mx-auto mb-3 h-16 w-16 rounded-2xl bg-white object-contain p-1.5 shadow-lg"
           />
-          <h2 className="text-2xl sm:text-[26px] font-bold tracking-tight text-foreground">
+          <h2 className="text-2xl sm:text-[26px] font-bold tracking-tight text-gray-900">
             Welcome to Cloud Kitchen Network
           </h2>
-          <p className="mt-2 text-sm text-muted-foreground">
+          <p className="mt-2 text-sm text-gray-600">
             Access exclusive food business training, strategies, and growth resources.
           </p>
         </div>
