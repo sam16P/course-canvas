@@ -66,7 +66,7 @@ export function LeadCapturePopup() {
         <button
           onClick={close}
           aria-label="Close"
-          className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full bg-black/5 text-foreground/70 transition hover:bg-black/10 hover:text-foreground"
+          className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full bg-black/5 text-gray-600 transition hover:bg-black/10 hover:text-gray-900"
         >
           <X className="h-4 w-4" />
         </button>
@@ -79,10 +79,10 @@ export function LeadCapturePopup() {
             height={64}
             className="mx-auto mb-3 h-16 w-16 rounded-2xl bg-white object-contain p-1.5 shadow-lg"
           />
-          <h2 className="text-2xl sm:text-[26px] font-bold tracking-tight text-foreground">
+          <h2 className="text-2xl sm:text-[26px] font-bold tracking-tight text-gray-900">
             Welcome to Cloud Kitchen Network
           </h2>
-          <p className="mt-2 text-sm text-muted-foreground">
+          <p className="mt-2 text-sm text-gray-600">
             Access exclusive food business training, strategies, and growth resources.
           </p>
         </div>
@@ -102,11 +102,11 @@ export function LeadCapturePopup() {
         </a>
 
         <div className="my-5 flex items-center gap-3">
-          <div className="h-px flex-1 bg-gradient-to-r from-transparent via-foreground/15 to-transparent" />
-          <span className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+          <div className="h-px flex-1 bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
+          <span className="text-xs font-medium uppercase tracking-wider text-gray-500">
             New Here? Register Below
           </span>
-          <div className="h-px flex-1 bg-gradient-to-r from-transparent via-foreground/15 to-transparent" />
+          <div className="h-px flex-1 bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-3">
@@ -116,9 +116,9 @@ export function LeadCapturePopup() {
               placeholder="Full Name"
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
-              className="w-full rounded-xl border border-border/60 bg-white/70 px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+              className="w-full rounded-xl border border-gray-200 bg-white/70 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
             />
-            {errors.name && <p className="mt-1 text-xs text-destructive">{errors.name}</p>}
+            {errors.name && <p className="mt-1 text-xs text-red-600">{errors.name}</p>}
           </div>
           <div>
             <input
@@ -126,9 +126,9 @@ export function LeadCapturePopup() {
               placeholder="City"
               value={form.city}
               onChange={(e) => setForm({ ...form, city: e.target.value })}
-              className="w-full rounded-xl border border-border/60 bg-white/70 px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+              className="w-full rounded-xl border border-gray-200 bg-white/70 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
             />
-            {errors.city && <p className="mt-1 text-xs text-destructive">{errors.city}</p>}
+            {errors.city && <p className="mt-1 text-xs text-red-600">{errors.city}</p>}
           </div>
           <div>
             <input
@@ -139,14 +139,14 @@ export function LeadCapturePopup() {
               onChange={(e) =>
                 setForm({ ...form, mobile: e.target.value.replace(/[^\d]/g, "") })
               }
-              className="w-full rounded-xl border border-border/60 bg-white/70 px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+              className="w-full rounded-xl border border-gray-200 bg-white/70 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
             />
-            {errors.mobile && <p className="mt-1 text-xs text-destructive">{errors.mobile}</p>}
+            {errors.mobile && <p className="mt-1 text-xs text-red-600">{errors.mobile}</p>}
           </div>
 
           <button
             type="submit"
-            className="mt-2 flex w-full items-center justify-center rounded-xl bg-foreground px-5 py-3.5 text-sm font-semibold text-background transition-all hover:-translate-y-0.5 hover:shadow-lg"
+            className="mt-2 flex w-full items-center justify-center rounded-xl bg-gray-900 px-5 py-3.5 text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:shadow-lg"
           >
             Register & Continue
           </button>
@@ -154,7 +154,7 @@ export function LeadCapturePopup() {
 
         <button
           onClick={close}
-          className="mt-4 w-full text-center text-xs font-medium text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
+          className="mt-4 w-full text-center text-xs font-medium text-gray-500 underline-offset-4 hover:text-gray-900 hover:underline"
         >
           Skip & Continue
         </button>
